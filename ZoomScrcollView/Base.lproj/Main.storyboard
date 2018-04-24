@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ZoomScrcollView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KPg-Ms-j55">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dead" translatesAutoresizingMaskIntoConstraints="NO" id="uTa-3d-iXB">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="uTa-3d-iXB" firstAttribute="leading" secondItem="KPg-Ms-j55" secondAttribute="leading" id="Bxg-0V-uwD"/>
+                                    <constraint firstAttribute="bottom" secondItem="uTa-3d-iXB" secondAttribute="bottom" id="IFY-td-yAl"/>
+                                    <constraint firstItem="uTa-3d-iXB" firstAttribute="centerY" secondItem="KPg-Ms-j55" secondAttribute="centerY" id="XrR-EK-Wbx"/>
+                                    <constraint firstAttribute="trailing" secondItem="uTa-3d-iXB" secondAttribute="trailing" id="nbD-Hh-87g"/>
+                                    <constraint firstItem="uTa-3d-iXB" firstAttribute="top" secondItem="KPg-Ms-j55" secondAttribute="top" id="oFf-bc-idU"/>
+                                    <constraint firstItem="uTa-3d-iXB" firstAttribute="centerX" secondItem="KPg-Ms-j55" secondAttribute="centerX" id="zGY-eP-i9o"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Jp7-ET-Tp4"/>
+                                </connections>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KPg-Ms-j55" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Aeg-Er-V32"/>
+                            <constraint firstItem="KPg-Ms-j55" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="GM2-qQ-zwf"/>
+                            <constraint firstItem="KPg-Ms-j55" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="c1d-00-iko"/>
+                            <constraint firstAttribute="trailing" secondItem="KPg-Ms-j55" secondAttribute="trailing" id="sON-qU-TG0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="image" destination="uTa-3d-iXB" id="0nc-bY-jgL"/>
+                        <outlet property="scrollView" destination="KPg-Ms-j55" id="b6i-aA-Y02"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dead" width="1024" height="576"/>
+    </resources>
+</document>
