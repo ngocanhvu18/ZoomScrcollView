@@ -11,10 +11,9 @@
 import UIKit
 
 class ViewController: UIViewController, UIScrollViewDelegate {
-    
-    @IBOutlet weak var image: UIImageView!
+       @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -25,11 +24,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return image
     }
-
-
-
-
-
+   
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
